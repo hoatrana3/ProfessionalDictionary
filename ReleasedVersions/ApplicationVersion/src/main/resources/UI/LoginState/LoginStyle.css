@@ -1,0 +1,13 @@
+#apLogin {
+    -fx-background-image: url("images/backgroundLogin.jpg");
+    -fx-background-size: cover;
+}
+
+#vbxLogin, #vbxLoged {
+    -fx-background-color: rgba(255,255,255,0.9);
+}
+
+.jfx-button {
+    -fx-background-radius: 2px;
+    -fx-background-color: rgba(218,218,218,0.5);
+}

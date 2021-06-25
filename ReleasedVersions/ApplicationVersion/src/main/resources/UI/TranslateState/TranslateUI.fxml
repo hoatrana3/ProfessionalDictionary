@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="apTranslate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@TranslateStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.dictionaries.states.TranslateState">
+   <children>
+      <HBox fx:id="hbxContain" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="464.0" spacing="20.0">
+               <children>
+                  <JFXButton fx:id="btnTranslate" buttonType="RAISED" onAction="#control" prefHeight="48.0" prefWidth="184.0" ripplerFill="#ff9d70" text="Translate now">
+                     <font>
+                        <Font name="Kefa Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXCheckBox fx:id="cbxSync" checkedColor="#ff9d70" text="Auto translate" textFill="WHITE" unCheckedColor="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Kefa Regular" size="16.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXComboBox fx:id="cbbType" focusColor="#a4f1ff" labelFloat="true" prefHeight="48.0" prefWidth="168.0" promptText="Settings" unFocusColor="WHITE" />
+                  <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="49.0" layoutY="286.0" onAction="#control" prefHeight="48.0" prefWidth="184.0" ripplerFill="#3973b2" text="Back" textFill="WHITE">
+                     <font>
+                        <Font name="Kefa Regular" size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="774.0" spacing="40.0">
+               <children>
+                  <JFXTextArea fx:id="txtAInput" focusColor="#0d5390" labelFloat="true" prefHeight="190.0" prefWidth="555.0" promptText="Your document here..." unFocusColor="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Your document">
+                           <font>
+                              <Font name="Kefa Regular" size="13.0" />
+                           </font></Tooltip>
+                     </tooltip>
+                  </JFXTextArea>
+                  <JFXTextArea fx:id="txtAOutput" editable="false" focusColor="#e57647" labelFloat="true" layoutX="10.0" layoutY="200.0" prefHeight="190.0" prefWidth="555.0" promptText="Still your document, but translated!" unFocusColor="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Times New Roman" size="20.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="Translated document">
+                           <font>
+                              <Font name="Kefa Regular" size="13.0" />
+                           </font></Tooltip>
+                     </tooltip>
+                  </JFXTextArea>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

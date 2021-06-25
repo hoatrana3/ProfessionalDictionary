@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="apLogin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" stylesheets="@LoginStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.dictionaries.states.LoginState">
+   <children>
+      <Pane fx:id="pnRippler" prefHeight="300.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="vbxLogin" alignment="CENTER" layoutX="35.0" layoutY="26.0" prefHeight="248.0" prefWidth="330.0">
+               <children>
+                  <Label text="LOGIN" textFill="#202b9e">
+                     <font>
+                        <Font name="Kefa Bold" size="32.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="330.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="17.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/user.png" />
+                           </image>
+                        </ImageView>
+                        <JFXTextField fx:id="txtFUser" labelFloat="true" promptText="User">
+                           <font>
+                              <Font name="Kefa Regular" size="12.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="17.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/lock.png" />
+                           </image>
+                        </ImageView>
+                        <JFXPasswordField fx:id="txtFPass" labelFloat="true" prefHeight="23.0" prefWidth="140.0" promptText="Password">
+                           <font>
+                              <Font name="Kefa Regular" size="12.0" />
+                           </font>
+                        </JFXPasswordField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="330.0" spacing="20.0">
+                     <children>
+                        <JFXButton fx:id="btnLogin" buttonType="RAISED" onAction="#control" ripplerFill="#3340ce" text="Login">
+                           <font>
+                              <Font name="Kefa Bold" size="10.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnTry" buttonType="RAISED" onAction="#control" ripplerFill="#3340ce" text="Try for free" textFill="#686868">
+                           <font>
+                              <Font name="Kefa Regular" size="10.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="pnLoged" disable="true" layoutX="10.0" layoutY="9.0" prefHeight="300.0" prefWidth="400.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="vbxLoged" alignment="CENTER" layoutX="35.0" layoutY="26.0" prefHeight="248.0" prefWidth="330.0" spacing="50.0">
+               <children>
+                  <Label text="You have already loged in" textFill="#bf8131" wrapText="true">
+                     <font>
+                        <Font name="Kefa Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnBack" buttonType="RAISED" onAction="#control" ripplerFill="#bf8131" text="Back to main menu">
+                     <font>
+                        <Font name="Kefa Bold" size="10.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="apImgReader" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@ImgReaderStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.dictionaries.states.ImgReaderState">
+    <children>
+        <HBox fx:id="hbxImgReader" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Pane prefHeight="600.0" prefWidth="450.0">
+                    <children>
+                        <JFXTextArea fx:id="txtAScan" editable="false" focusColor="#1db8c3" labelFloat="true" layoutX="18.0" layoutY="167.0" prefHeight="266.0" prefWidth="251.0" promptText="Scanned document" unFocusColor="WHITE" wrapText="true">
+                            <tooltip>
+                                <Tooltip text="Scanned document" wrapText="true" />
+                            </tooltip>
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                        </JFXTextArea>
+                    </children>
+                </Pane>
+                <VBox alignment="CENTER" prefHeight="600.0" prefWidth="393.0" spacing="30.0">
+                    <children>
+                        <HBox alignment="BOTTOM_CENTER" prefHeight="61.0" prefWidth="296.0" spacing="10.0">
+                            <children>
+                                <JFXTextField fx:id="txtFPath" editable="false" labelFloat="true" prefHeight="30.0" prefWidth="149.0" promptText="Your image (text only)" unFocusColor="WHITE">
+                                    <font>
+                                        <Font name="Kefa Regular" size="13.0" />
+                                    </font>
+                           <focusColor>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#bc600f" />
+                                    <Stop color="#1db8c3" offset="0.007434944237918215" />
+                                    <Stop color="#bc600f" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </focusColor>
+                                </JFXTextField>
+                                <JFXButton fx:id="btnBrowser" buttonType="RAISED" onAction="#control" prefHeight="32.0" prefWidth="76.0" ripplerFill="#1db8c3" text="Browser">
+                           <font>
+                              <Font name="Kefa Bold" size="13.0" />
+                           </font>
+                        </JFXButton>
+                            </children>
+                        </HBox>
+                  <ImageView fx:id="imgChosen" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <DropShadow height="30.11" radius="15.3125" spread="0.08" width="33.14" />
+                     </effect>
+                  </ImageView>
+                        <JFXButton fx:id="btnBack" buttonType="RAISED" onAction="#control" prefHeight="32.0" prefWidth="76.0" ripplerFill="#bc600f" text="Back" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Kefa Regular" size="13.0" />
+                     </font>
+                  </JFXButton>
+                    </children>
+                </VBox>
+            <Pane layoutX="37.0" layoutY="10.0" prefHeight="600.0" prefWidth="450.0">
+               <children>
+                  <JFXTextArea fx:id="txtAResult" editable="false" focusColor="#bc600f" labelFloat="true" layoutX="18.0" layoutY="167.0" prefHeight="266.0" prefWidth="251.0" promptText="The result here" unFocusColor="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="The result here" wrapText="true" />
+                     </tooltip>
+                  </JFXTextArea>
+               </children>
+            </Pane>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

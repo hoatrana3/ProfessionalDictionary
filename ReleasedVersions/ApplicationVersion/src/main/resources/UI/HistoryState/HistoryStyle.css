@@ -1,0 +1,49 @@
+#apHistory {
+    -fx-background-image: url("images/backgroundHistory.jpg");
+    -fx-background-size: cover;
+}
+
+#vbxContain {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+}
+
+#btnBack {
+    -fx-background-radius: 5px;
+}
+
+#txtFSearch {
+    -fx-prompt-text-fill: #CCCCCC;
+    -fx-text-fill: White;
+}
+
+#lvwHistory {
+    -fx-font: 17px "Kefa";
+    -fx-background-color: transparent;
+    -fx-background-radius: 20px;
+    -fx-border-color: White;
+    -fx-border-radius: 20px;
+}
+
+.list-cell {
+    -fx-text-fill: White;
+}
+
+.list-cell:odd {
+    -fx-background-color: transparent;
+    -fx-background-radius: 20px;
+}
+
+.list-cell:even {
+    -fx-background-color: transparent;
+    -fx-background-radius: 20px;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: rgba(255,255,255,0.7);
+    -fx-text-fill: Black;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: rgba(255,109,99,0.7);
+    -fx-text-fill: White;
+}

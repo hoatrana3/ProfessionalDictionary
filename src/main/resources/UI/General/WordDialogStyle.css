@@ -1,0 +1,47 @@
+#vbxContainDialog {
+    -fx-background-color: rgba(0,0,0,0.4);
+}
+
+#vbxDialog {
+    -fx-background-color: rgba(255,255,255,0.85);
+    -fx-background-radius: 10px;
+}
+
+.tab {
+    -fx-background-color: none;
+    -fx-font-family: "Kefa";
+    -fx-pref-width: 120px;
+}
+
+.tab-header-background {
+    -fx-background-color: rgba(9,19,44,0.95);
+    -fx-background-radius: 10px 10px 0px 0px;
+}
+
+.jfx-tab-pane .control-buttons-tab {
+    -fx-background-color: rgba(2,23,45,0.95);
+}
+.jfx-tab-pane .control-buttons-tab .tab-down-button {
+    -fx-background-color: rgba(2,23,45,0.95);
+}
+.jfx-tab-pane .control-buttons-tab .jfx-rippler{
+    -fx-background-color: rgba(2,23,45,0.95);
+}
+
+#txtAMore {
+    -fx-text-fill: #343434;
+    -fx-prompt-text-fill: #ABABAB;
+}
+
+#btnDone, #btnRemove {
+    -fx-background-radius: 2px;
+    -fx-background-color: rgba(218,218,218,0.3);
+}
+
+#btnListen {
+    -fx-background-radius: 50%;
+}
+
+#lblTarget {
+
+}

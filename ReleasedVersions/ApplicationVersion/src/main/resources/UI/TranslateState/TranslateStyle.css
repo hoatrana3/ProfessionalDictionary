@@ -1,0 +1,54 @@
+#apTranslate {
+    -fx-background-image: url("images/backgroundTranslate.jpg");
+    -fx-background-size: cover;
+}
+
+#hbxContain {
+    -fx-background-color: rgba(0,0,0,0.3);
+}
+
+.jfx-text-area {
+    -fx-prompt-text-fill: #C8C8C8;
+    -fx-text-fill: White;
+}
+
+.jfx-text-area .scroll-pane .scroll-bar {
+    -fx-background-color: #4C4C4C;
+}
+
+.jfx-text-area .scroll-pane .scroll-bar .slider {
+    -fx-background-color: #4C4C4C;
+}
+
+.jfx-combo-box {
+    -fx-prompt-text-fill: White;
+    -fx-text-fill: White;
+    -fx-font: 16px "Kefa";
+}
+
+#btnTranslate {
+     -fx-background-radius: 5px;
+     -fx-background-color: rgba(247,247,247,0.6);
+ }
+
+#btnBack {
+    -fx-background-radius: 5px;
+    -fx-background-color: rgba(100,100,100,0.3);
+}
+
+.combo-box-base {
+    -fx-text-fill: White;
+}
+
+.combo-box .cell:selected {
+    -fx-text-fill: #FFFBD8;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #a4f1ff ;
+}
+
+.tooltip {
+    -fx-font-family: "Kefa";
+    -fx-font-size: 14px;
+}

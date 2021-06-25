@@ -1,0 +1,38 @@
+#apContact {
+    -fx-background-image: url("images/backgroundContact.jpg");
+    -fx-background-size: cover;
+}
+
+#vbxContain {
+    -fx-background-color: rgba(0,0,0,0.3);
+}
+
+#btnTBH, #btnNMH  {
+    -fx-text-fill: rgba(255,255,255,1.0);
+    -fx-background-radius: 50%;
+}
+
+#imgNMH, #imgTBH {
+    -fx-opacity: 0.75;
+}
+
+#btnTBH:hover, #btnNMH:hover{
+    -fx-text-fill: rgba(255,255,255,0.0);
+}
+
+#btnTBH:hover #imgTBH {
+    -fx-effect: null;
+    -fx-text-fill: rgba(255,255,255,0.0);
+    -fx-opacity: 1.0;
+}
+
+#btnNMH:hover #imgNMH {
+    -fx-effect: null;
+    -fx-text-fill: rgba(255,255,255,0.0);
+    -fx-opacity: 1.0;
+}
+
+#btnBack {
+    -fx-background-radius: 5px;
+    -fx-background-color: rgba(100,100,100,0.5);
+}

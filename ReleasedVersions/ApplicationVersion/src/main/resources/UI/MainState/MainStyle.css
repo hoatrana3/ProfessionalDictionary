@@ -1,0 +1,82 @@
+#apMain {
+    -fx-background-image: url("images/backgroundMain.jpeg");
+    -fx-background-size: cover;
+}
+
+#hbxContain {
+    -fx-background-color: rgba(0,0,0,0.3);
+}
+
+#txtFSearch {
+    -fx-text-fill: White;
+    -fx-prompt-text-fill: #BABABA;
+}
+
+.jfx-hamburger StackPane {
+    -fx-background-color: #f7c34a;
+}
+
+#pnMenu {
+    -fx-background-image: url("images/menu.jpeg");
+    -fx-background-size: cover;
+    -fx-background-color: Black;
+}
+
+#vbxMenu .jfx-button {
+    -fx-background-color: #252525;
+    -fx-background-radius: 0px;
+    -fx-border-radius: 0px;
+}
+
+#vbxMenu .jfx-button:hover {
+    -fx-background-color: #1F243D;
+}
+
+#lvwWords {
+    -fx-background-color: none;
+    -fx-text-fill: White;
+    -fx-font: 13px "Kefa";
+}
+
+#lvwWords .list-cell:even {
+    -fx-background-color: rgba(29,61,82,0.5);
+    -fx-text-fill: White;
+}
+#lvwWords .list-cell:odd {
+    -fx-background-color: rgba(40,78,102,0.5);
+    -fx-text-fill: White;
+}
+
+#lvwWords .scroll-bar {
+    -fx-background-color: rgba(65,83,94,0.8);
+    -fx-text-fill: White;
+}
+
+#lvwWords .list-cell:selected {
+    -fx-background-color: rgba(192,192,192,0.3);
+    -fx-text-fill: White;
+}
+
+#btnLogin, #btnHistory {
+    -fx-background-radius: 5px;
+    -fx-background-color: rgba(5,62,106,0.5);
+}
+
+.tooltip {
+    -fx-font-family: "Kefa";
+    -fx-font-size: 14px;
+}
+
+#hbxHints .label {
+    -fx-text-fill: #EAF6FE;
+    -fx-text-alignment: Center;
+    -fx-font-family: Kefa;
+}
+
+#hbxHints .label:hover {
+    -fx-text-fill: #00AAFF;
+}
+
+#lblAddWord:hover {
+    -fx-text-fill: #a17f0f;
+}

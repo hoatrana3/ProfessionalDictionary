@@ -1,0 +1,64 @@
+buildscript {
+    dependencies {
+        classpath group: 'de.dynamicfiles.projects.gradle.plugins', name: 'javafx-gradle-plugin', version: '8.8.2'
+    }
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+
+group 'ProfessionalDictionary'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+apply plugin: 'javafx-gradle-plugin'
+
+jfx {
+    // minimal requirement for jfxJa r-task
+    mainClass = 'app.AppMain'
+
+    // minimal requirement for jfxNative-task
+    vendor = 'DoubleH'
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "app.CommandMain"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'src/main/libraries')
+    compile group: 'net.sourceforge.tess4j', name: 'tess4j', version: '3.2.1'
+}
+
+task customFatJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'app.AppMain'
+    }
+    baseName = 'ApplicationVersion'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["src/main/resources"]
+            includes = ["**/*.fxml"]
+        }
+    }
+}

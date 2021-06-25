@@ -1,0 +1,22 @@
+#apMarked {
+    -fx-background-image: url("images/backgroundMarked.jpg");
+    -fx-background-size: cover;
+}
+
+#vbxContain {
+    -fx-background-color: rgba(0,0,0,0.3);
+}
+
+#btnBack {
+    -fx-background-radius: 5px;
+    -fx-background-color: rgba(39,39,39,0.7);
+}
+
+#txtFSearch {
+    -fx-prompt-text-fill: #CCCCCC;
+    -fx-text-fill: White;
+}
+
+#ttvList {
+    -fx-font-family: "Kefa";
+}

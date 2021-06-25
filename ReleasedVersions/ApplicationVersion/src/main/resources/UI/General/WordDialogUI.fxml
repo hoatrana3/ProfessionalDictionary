@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="vbxContainDialog" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@WordDialogStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox fx:id="vbxDialog" alignment="CENTER" prefHeight="400.0" prefWidth="533.0">
+         <children>
+            <JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="305.0" prefWidth="533.0">
+               <tabs>
+                  <Tab text="General">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="290.0" prefWidth="533.0" spacing="10.0" AnchorPane.bottomAnchor="-16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label fx:id="lblTarget" contentDisplay="RIGHT" graphicTextGap="10.0" text="Word" textFill="#02172d" wrapText="true">
+                                       <font>
+                                          <Font name="Kefa Bold" size="40.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblPronounce" contentDisplay="RIGHT" text="Pronunciation" textFill="#4a4a4a" wrapText="true">
+                                       <font>
+                                          <Font name="Kefa Regular" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXButton fx:id="btnListen" contentDisplay="CENTER" disable="true" opacity="0.0" prefHeight="55.0" prefWidth="55.0" ripplerFill="#011539" text=" " textFill="#4d4d4d" visible="false" wrapText="true">
+                                       <font>
+                                          <Font name="Avenir Roman" size="14.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/play-button.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Label fx:id="lblInfoLoad" textFill="#727272">
+                                       <font>
+                                          <Font name="Kefa Regular" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Details">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" layoutX="-1.0" layoutY="-2.0" prefHeight="327.0" prefWidth="533.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <JFXTextArea fx:id="txtAMore" editable="false" focusColor="#100c63" labelFloat="true" prefHeight="237.0" prefWidth="533.0" promptText="Meanings" unFocusColor="#616161" wrapText="true">
+                                       <font>
+                                          <Font name="Times New Roman" size="18.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="50.0" right="50.0" />
+                                       </padding>
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </JFXTextArea>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+            <VBox alignment="CENTER" prefHeight="109.0" prefWidth="533.0">
+               <children>
+                  <JFXToggleButton fx:id="tglMark" prefHeight="33.0" prefWidth="142.0" size="7.0" text="Mark word" textAlignment="CENTER" textFill="#505050" toggleColor="#f7c34a" toggleLineColor="#ffeaab" unToggleColor="#fafafa" unToggleLineColor="#909eb2">
+                     <font>
+                        <Font name="Kefa Regular" size="14.0" />
+                     </font>
+                  </JFXToggleButton>
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="533.0" spacing="10.0">
+                     <children>
+                        <JFXButton fx:id="btnDone" buttonType="RAISED" prefHeight="68.0" prefWidth="106.0" ripplerFill="#f1f17e" text="Done" textFill="#505050" wrapText="true">
+                           <font>
+                              <Font name="Kefa Regular" size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnRemove" buttonType="RAISED" layoutX="224.0" layoutY="10.0" prefHeight="68.0" prefWidth="106.0" ripplerFill="#fc7049" text="Remove" textFill="#505050" wrapText="true">
+                           <font>
+                              <Font name="Kefa Regular" size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets left="133.0" right="134.0" />
+   </padding>
+</VBox>

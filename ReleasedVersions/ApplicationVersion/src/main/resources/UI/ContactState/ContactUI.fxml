@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="apContact" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@ContactStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.dictionaries.states.ContactState">
+   <children>
+      <VBox fx:id="vbxContain" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Please don't hesitate to contact us" textFill="WHITE">
+               <font>
+                  <Font name="Kefa Regular" size="28.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="204.0" prefWidth="800.0">
+               <children>
+                  <JFXButton fx:id="btnTBH" contentDisplay="CENTER" mnemonicParsing="false" onAction="#control" prefHeight="127.0" prefWidth="152.0" text="TRAN BA HOA" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Kefa Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgTBH" fitHeight="226.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true">
+                           <effect>
+                              <Lighting diffuseConstant="0.38" specularConstant="0.01" specularExponent="20.48" surfaceScale="2.93">
+                                 <bumpInput>
+                                    <Shadow color="#ffebcd" height="24.04" radius="11.52" width="24.04" />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <image>
+                              <Image url="@images/tranbahoa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnNMH" contentDisplay="CENTER" layoutX="94.0" layoutY="10.0" mnemonicParsing="false" onAction="#control" prefHeight="127.0" prefWidth="152.0" text="NGO MINH HOANG" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Kefa Regular" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNMH" fitHeight="226.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true">
+                           <effect>
+                              <Lighting diffuseConstant="0.38" specularConstant="0.01" specularExponent="20.48" surfaceScale="2.93">
+                                 <bumpInput>
+                                    <Shadow color="#ffebcd" height="24.04" radius="11.52" width="24.04" />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant />
+                                 </light>
+                              </Lighting>
+                           </effect>
+                           <image>
+                              <Image url="@images/ngominhhoang.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="54.0" prefWidth="800.0">
+               <children>
+                  <Label text="Email: contacts@doubleh.global.com" textFill="WHITE">
+                     <font>
+                        <Font name="Kefa Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Phone number: 0385694791 - 0901797743" textFill="WHITE">
+                     <font>
+                        <Font name="Kefa Regular" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Website: dictionary.doubleh.global.vn" textFill="WHITE">
+                     <font>
+                        <Font name="Kefa Regular" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </VBox>
+            <JFXButton fx:id="btnBack" buttonType="RAISED" onAction="#control" prefHeight="32.0" prefWidth="74.0" ripplerFill="#ffb880" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="Kefa Regular" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

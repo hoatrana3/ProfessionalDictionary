@@ -1,0 +1,31 @@
+#apImgReader {
+    -fx-background-image: url("images/backgroundImgReader.jpg");
+    -fx-background-size: cover;
+}
+
+#hbxImgReader {
+    -fx-background-color: rgba(0,0,0,0.6);
+}
+
+.jfx-button {
+    -fx-background-radius: 2px;
+    -fx-background-color: rgba(218,218,218,0.8);
+}
+
+.jfx-text-area {
+    -fx-prompt-text-fill: #C8C8C8;
+    -fx-text-fill: White;
+}
+
+.jfx-text-area .scroll-pane .scroll-bar {
+    -fx-background-color: #4C4C4C;
+}
+
+.jfx-text-area .scroll-pane .scroll-bar .slider {
+    -fx-background-color: #4C4C4C;
+}
+
+#txtFPath {
+    -fx-text-fill: White;
+    -fx-prompt-text-fill: #BABABA;
+}

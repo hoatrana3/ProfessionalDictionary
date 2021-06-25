@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="apMain" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="800.0" stylesheets="@MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.dictionaries.states.MainState">
+   <children>
+      <HBox fx:id="hbxContain" alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="vbxSearchContain" alignment="TOP_CENTER" prefHeight="600.0" prefWidth="570.0" spacing="20.0">
+               <children>
+                  <ImageView fx:id="imgLogo" fitHeight="136.0" fitWidth="415.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logo.png" />
+                     </image>
+                     <effect>
+                        <Bloom threshold="1.0">
+                           <input>
+                              <DropShadow color="#2967d6" height="88.17" radius="42.730000000000004" spread="0.12" width="84.75">
+                                 <input>
+                                    <Lighting bumpInput="$null" diffuseConstant="2.0" specularConstant="2.0" specularExponent="0.0" surfaceScale="0.0">
+                                       <light>
+                                          <Light.Distant />
+                                       </light>
+                                    </Lighting>
+                                 </input></DropShadow>
+                           </input>
+                        </Bloom>
+                     </effect>
+                  </ImageView>
+                  <AnchorPane fx:id="apContain" prefHeight="410.0" prefWidth="567.0">
+                     <children>
+                        <VBox layoutX="88.0" prefHeight="367.0" prefWidth="391.0" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="88.0" AnchorPane.rightAnchor="88.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <JFXCheckBox fx:id="cbxShowAll" checkedColor="#f7c34a" text="Show all words?" textAlignment="CENTER" textFill="#e1e1e1" unCheckedColor="#c9c9c9" wrapText="true">
+                                 <font>
+                                    <Font name="Kefa Regular" size="13.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" left="10.0" />
+                                 </VBox.margin>
+                              </JFXCheckBox>
+                              <JFXButton fx:id="btnSearch" buttonType="RAISED" onAction="#control" ripplerFill="#f7c34a" text="Look up" textFill="WHITE">
+                                 <font>
+                                    <Font name="Kefa Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <JFXTextField fx:id="txtFSearch" focusColor="#ffc54a" labelFloat="true" prefHeight="30.0" prefWidth="300.0" promptText="What do you want to look up?" unFocusColor="WHITE">
+                                       <font>
+                                          <Font name="Kefa Regular" size="14.0" />
+                                       </font>
+                                    </JFXTextField>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXListView fx:id="lvwWords" prefHeight="295.0" prefWidth="301.0" showTooltip="true">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="80.0" />
+                                 </VBox.margin>
+                              </JFXListView>
+                           </children>
+                        </VBox>
+                        <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="12.0" layoutY="366.0" onAction="#control" ripplerFill="#f7c34a" text="Login" textFill="WHITE">
+                           <font>
+                              <Font name="Kefa Regular" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <HBox fx:id="hbxHints" alignment="CENTER_LEFT" layoutX="99.0" layoutY="83.0" prefHeight="36.0" prefWidth="467.0" spacing="5.0" AnchorPane.bottomAnchor="291.0" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="83.0">
+                           <children>
+                              <Text fill="#0376b9" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Did you mean? " textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Kefa Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <Label fx:id="lblAddWord" layoutX="99.0" layoutY="114.0" text="Add your word to dictionary?" textFill="#e4b91f" visible="false" wrapText="true" AnchorPane.bottomAnchor="281.0" AnchorPane.leftAnchor="99.0" AnchorPane.rightAnchor="289.0" AnchorPane.topAnchor="114.0">
+                           <font>
+                              <Font name="Kefa Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets top="40.0" />
+               </padding>
+            </VBox>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <JFXDrawer fx:id="drwMenu" defaultDrawerSize="220.0" direction="RIGHT" prefHeight="601.0" prefWidth="233.0">
+                     <children>
+                        <VBox fx:id="vbxMenu" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="233.0" style="-fx-background-color: #252525;" stylesheets="@MainStyle.css">
+                           <children>
+                              <Pane fx:id="pnMenu" prefHeight="118.0" prefWidth="233.0">
+                                 <children>
+                                    <Pane opacity="0.45" prefHeight="133.0" prefWidth="233.0" style="-fx-background-color: Black;" />
+                                    <Label fx:id="lblService" blendMode="HARD_LIGHT" layoutX="26.0" layoutY="62.0" text="Main menu" textAlignment="CENTER" textFill="#ffd073" wrapText="true">
+                                       <font>
+                                          <Font name="Kefa Bold" size="35.0" />
+                                       </font>
+                                       <effect>
+                                          <Bloom threshold="0.0" />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <JFXButton fx:id="btnTranslate" contentDisplay="TOP" graphicTextGap="10.0" onAction="#control" prefHeight="85.0" prefWidth="233.0" ripplerFill="#d1844f" text="Translator" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Kefa Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/translate.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <tooltip>
+                                    <Tooltip text="Translate document" />
+                                 </tooltip>
+                              </JFXButton>
+                              <JFXButton fx:id="btnMarked" contentDisplay="TOP" graphicTextGap="10.0" layoutX="10.0" layoutY="258.0" onAction="#control" prefHeight="85.0" prefWidth="233.0" ripplerFill="#d1844f" text="Marked words" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Kefa Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/star.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <tooltip>
+                                    <Tooltip text="Your marked words" />
+                                 </tooltip>
+                              </JFXButton>
+                              <JFXButton fx:id="btnImg" contentDisplay="TOP" graphicTextGap="10.0" layoutX="10.0" layoutY="273.0" onAction="#control" prefHeight="85.0" prefWidth="233.0" ripplerFill="#d1844f" text="Image Scanner" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Kefa Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/image.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Scan and translate image" />
+                                 </tooltip>
+                              </JFXButton>
+                              <JFXButton fx:id="btnHistory" contentDisplay="TOP" graphicTextGap="10.0" layoutX="10.0" layoutY="345.0" onAction="#control" prefHeight="85.0" prefWidth="233.0" ripplerFill="#d1844f" text="History" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Kefa Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/undo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Undo adding or removing" />
+                                 </tooltip>
+                              </JFXButton>
+                              <JFXButton fx:id="btnContact" contentDisplay="TOP" graphicTextGap="10.0" layoutX="10.0" layoutY="373.0" onAction="#control" prefHeight="85.0" prefWidth="233.0" ripplerFill="#d1844f" text="Contacts" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Kefa Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="33.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/contact.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <tooltip>
+                                    <Tooltip text="Our infomation" />
+                                 </tooltip>
+                              </JFXButton>
+                              <AnchorPane prefHeight="57.0" prefWidth="233.0">
+                                 <children>
+                                    <Label fx:id="lblCopyright" layoutX="27.0" layoutY="10.0" prefHeight="43.0" prefWidth="179.0" text="Copyright © 2018 All Rights Reserved" textFill="#c9c9c9" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="10.0">
+                                       <font>
+                                          <Font name="Kefa Regular" size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </JFXDrawer>
+                  <JFXHamburger fx:id="hbgMenu" alignment="CENTER_RIGHT" layoutX="163.0" prefHeight="51.0" prefWidth="70.0" AnchorPane.leftAnchor="163.0" AnchorPane.rightAnchor="0.0">
+                     <padding>
+                        <Insets right="25.0" top="10.0" />
+                     </padding>
+                  </JFXHamburger>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="apHistory" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@HistoryStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.dictionaries.states.HistoryState">
+   <children>
+      <VBox fx:id="vbxContain" alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="460.0" prefWidth="800.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="txtFSearch" focusColor="#d2a2ff" labelFloat="true" prefHeight="27.0" prefWidth="232.0" promptText="Search" unFocusColor="WHITE">
+                     <VBox.margin>
+                        <Insets left="300.0" right="300.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Kefa Regular" size="17.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXListView fx:id="lvwHistory" prefHeight="429.0" prefWidth="800.0" showTooltip="true">
+                     <VBox.margin>
+                        <Insets left="150.0" right="150.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </JFXListView>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="54.0" prefWidth="800.0">
+               <children>
+                  <JFXButton fx:id="btnBack" buttonType="RAISED" onAction="#control" prefHeight="39.0" prefWidth="100.0" ripplerFill="#ff6d63" text="Back" textFill="WHITE">
+                     <font>
+                        <Font name="Kefa Regular" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="360.0" layoutY="18.0" onAction="#control" prefHeight="39.0" prefWidth="100.0" ripplerFill="#ff6d63" text="Clear" textFill="WHITE">
+                     <font>
+                        <Font name="Kefa Regular" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnRevert" buttonType="RAISED" layoutX="310.0" layoutY="18.0" onAction="#control" prefHeight="39.0" prefWidth="100.0" ripplerFill="#ff6d63" text="Revert" textFill="WHITE">
+                     <font>
+                        <Font name="Kefa Regular" size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
